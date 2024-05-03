@@ -24,7 +24,7 @@ for _ in range(iterations):
     response = requests.post(url, data={"Input_Config": config})
     
     #Returns API response
-    print("RIS API:", response.text)
+    print(f"RIS API:{response.text}")
     
     time.sleep(interval)
 
