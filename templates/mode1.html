@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>API v1.0</title>
+    </head>
+    <body>
+        <h1>API Mode 1 page</h1>
+        <h4> Mode 1 - Receive dict, receive angle and execute: {"angle":[config]} <h4>
+        <form method="POST" action="/mode1"> 
+            <label for="dictionary">RIS Codebook Dictionary:</label><br>
+            <textarea name="dictionary" rows="10" cols="50"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+        {% if submitted %}
+        {% if dictionary is dict %}
+        <p>Input Dictionary:</p>
+        <ul>
+            {% for key, value in dictionary.items() %}
+                <li>{{ key }}: {{ value }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>Input is not a dictionary.</p>
+        {% endif %}
+        {% endif %}
+    </body>
+</html>

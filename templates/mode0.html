@@ -1,0 +1,19 @@
+
+<html>
+    <head>
+        <title>API v1.0</title>
+    </head>
+    <body>
+        <h1>API Mode 0 page</h1>
+        <h3> Mode 0 - Receive and execute: [config] <h3>
+        <form method="POST" action="/mode0"> 
+            <label for="Input_Config">RIS Config:</label><br>
+            <textarea name="Input_Config" rows="10" cols="50"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+        {% if submitted %}
+        <p>Input Configuration:</p>
+        <h4> {{ return_text }}<h4>
+        {% endif %}
+    </body>
+</html>

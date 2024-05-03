@@ -1,0 +1,35 @@
+
+<html>
+    <head>
+        <title>API v1.0</title>
+    </head>
+    <body>
+        <h1>Homepage - RIS API V1.0</h1>
+        <form id="api_form" method="POST">
+            <label for="api_mode">API Mode:</label><br>
+            <select id="api_mode_select" name="api_mode">
+                <option value="0">Mode 0</option>
+                <option value="1">Mode 1</option>
+                <option value="2">Mode 2</option>
+            <select><br>
+                <h4> Mode 0 - Receive and execute: [config] <h4>
+                <h4> Mode 1 - Receive dict, receive angle and execute: {"angle":[config]} <h4>
+                <h4> Mode 2 - Receive live sensor data and execute: sensordata <h4>
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            document.getElementById('api_form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+        
+                var selectedMode = document.getElementById('api_mode_select').value;
+                if (selectedMode === '0') {
+                    window.location.href = '/mode0'; // Redirect to mode0 page
+                } else if (selectedMode === '1') {
+                    window.location.href = '/mode1'; // Redirect to mode1 page
+                } else if (selectedMode === '2') {
+                    window.location.href = '/mode2'; // Redirect to mode2 page
+                }
+            });
+        </script>
+    </body>
+</html>
