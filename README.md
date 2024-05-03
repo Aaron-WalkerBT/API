@@ -1,1 +1,1 @@
-![Alt text](relative/path/to/RIS_API.jpg)
+![Alt text](RIS_API.jpg)
