@@ -16,7 +16,7 @@ def execute_config(tile_num, array):
         print(type(array))
         return f"32:16 Config should be sent: {array}"
     else:
-        return "Config is too largee"
+        return "Config is too large"
     
     
 app = FastAPI()
