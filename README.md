@@ -1,1 +1,1 @@
-![Alt text](RIS_API.jpg)
+![Alt text](RIS_API.png)
